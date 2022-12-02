@@ -42,7 +42,7 @@ index c4736a5..5822302 100644
  import proxy from './plugins/proxy';
  import techdocs from './plugins/techdocs';
  import search from './plugins/search';
-+import sonarqube from './plugins/sonarqube';
++import blackduck from './plugins/blackduck';
  import { PluginEnvironment } from './types';
  import { ServerPermissionClient } from '@backstage/plugin-permission-node';
  import { DefaultIdentityClient } from '@backstage/plugin-auth-node';
@@ -66,7 +66,7 @@ index c4736a5..5822302 100644
 ```
 
 ## Continue with Frontend Plugin
-Follow the Docs from `https://github.com/deepan10/backstage-plugin-blackduck`
+Follow the Docs from [README.md](https://github.com/deepan10/backstage-plugin-blackduck)
 
 ## Configuration
 
