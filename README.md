@@ -10,14 +10,14 @@ This plugin needs to be added to an existing backstage instance.
 
 ```bash
 # From your Backstage root directory
-yarn add --cwd packages/backend @deepan10/backstage-plugin-blackduck-backend
+yarn add --cwd packages/backend backstage-plugin-blackduck-backend
 ```
 
 Create a file called blackduck.ts inside `packages/backend/src/plugins/` and add the following:
 
 ### blackduck.ts
 ```typescript
-import { createRouter } from '@deepan10/backstage-plugin-blackduck-backend';
+import { createRouter } from 'backstage-plugin-blackduck-backend';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
 
