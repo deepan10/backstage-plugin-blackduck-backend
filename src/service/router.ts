@@ -44,13 +44,25 @@ export async function createRouter(
   });
 
   router.get(
+    '/risk-profile/:projectName/:projectVersion',
+    async (_request, response) => {
+      logger.verbose('getting vulnarabilities..');
+      const { projectName, projectVersion } = _request.params;
+      const blackDuck = new BlackDuckRestApi(logger, host, token);
+      await blackDuck.auth();
+      const risk_profile = await blackDuck.getRiskProfile(projectName, projectVersion);      
+      response.json(risk_profile);
+    },
+  );
+
+  router.get(
     '/vulns/:projectName/:projectVersion',
     async (_request, response) => {
       logger.verbose('getting vulnarabilities..');
       const { projectName, projectVersion } = _request.params;
       const blackDuck = new BlackDuckRestApi(logger, host, token);
       await blackDuck.auth();
-      const vulns = await blackDuck.getVulnerabilities(projectName, projectVersion);      
+      const vulns = await blackDuck.getVulnerableComponents(projectName, projectVersion);      
       response.json(vulns);
     },
   );
