@@ -1,5 +1,7 @@
 # backstage-plugin-blackduck-backend
 
+!! This plugin is moved to https://github.com/deepan10/backstage-plugins/tree/main/plugins/blackduck-backend
+
 Welcome to the backstage-plugin-blackduck-backend backend plugin!
 
 
